@@ -27,14 +27,14 @@ int main(int argc, char* argv[])
 				if(run == 0) // Script no ejecutandose, lanzarlo
 				{
 					run = 1;
-					snprintf(script, MAX_CMD_LINE, "./run_mysh.sh %s", argv[1]);
+					snprintf(script, MAX_CMD_LINE, "run_mysh.sh %s", argv[1]);
 					system(script);
 					delay(WAIT_PRES);
 				}
 				else // Script ejecutandose, pararlo (cerrarlo)
 				{
 					run = 0;
-					snprintf(script, MAX_CMD_LINE, "./stop_mysh.sh %s", argv[1]);
+					snprintf(script, MAX_CMD_LINE, "stop_mysh.sh %s", argv[1]);
 					system(script);
 					delay(WAIT_PRES);
 				}
